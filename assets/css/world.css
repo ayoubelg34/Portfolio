@@ -1,0 +1,1810 @@
+/* The world: a field of ice in front of a distant, low horizon. */
+.site-header {
+  height: 88px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid #bddcee0b;
+  background: #09151d;
+}
+.identity {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  font-weight: 550;
+  font-size: 13px;
+  letter-spacing: -0.2px;
+}
+.identity img {
+  width: 36px;
+  height: 36px;
+  opacity: 0.9;
+  transition: transform 0.5s var(--ease);
+}
+.identity:hover img {
+  transform: rotate(-9deg);
+}
+.identity small {
+  display: block;
+  font-weight: 400;
+  font-size: 9px;
+  margin-top: 5px;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+.header-location {
+  font: 10px var(--mono);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  color: var(--muted);
+}
+.local-time {
+  margin-left: 8px;
+  color: #dce8ed;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 11px;
+  padding: 13px 2px 13px 19px;
+}
+.contact-link .icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s var(--ease);
+}
+.contact-link:hover .icon {
+  transform: translate(3px, -3px);
+}
+.world {
+  position: relative;
+  min-height: 790px;
+  height: calc(100svh - 88px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 65% 47%, #18334155, transparent 53%),
+    radial-gradient(ellipse at 49% 96%, #24434c40, transparent 48%), #09151d;
+}
+.world::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' opacity='.18' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  opacity: 0.14;
+  pointer-events: none;
+}
+.intro {
+  position: absolute;
+  left: 7%;
+  top: 65px;
+  z-index: 3;
+  pointer-events: none;
+  max-width: 460px;
+  transition:
+    opacity 0.35s,
+    transform 0.65s var(--ease);
+}
+.intro a {
+  pointer-events: auto;
+}
+.intro .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: #bbced8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+h1 {
+  font-size: clamp(83px, 8.4vw, 126px);
+  font-weight: 430;
+  line-height: 0.92;
+  letter-spacing: -7px;
+  margin: 28px 0 27px;
+  position: relative;
+}
+h1 > span:not(.title-star) {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -3px;
+  color: #cee2ed;
+  white-space: nowrap;
+}
+.title-star {
+  position: absolute;
+  right: -26px;
+  top: 25px;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 35px;
+  letter-spacing: 0;
+  color: #9ec5d8;
+}
+.hero-statement {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  margin: 0 0 14px;
+}
+.hero-statement em {
+  font-style: normal;
+  color: #b4c9d4;
+}
+.hero-bio {
+  font-size: 11px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 0;
+  max-width: 310px;
+}
+.hero-project-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  font-size: 11px;
+  margin-top: 28px;
+  border-bottom: 1px solid #b9deee70;
+  padding: 0 0 10px;
+}
+.hero-project-link > span {
+  font: 8px var(--mono);
+  color: var(--muted);
+  margin-left: 14px;
+}
+.hero-project-link .icon {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.4s;
+}
+.hero-project-link:hover .icon {
+  transform: translateX(5px);
+}
+.exploration {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  outline: none !important;
+}
+.world-stage {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+}
+.field-horizon {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  bottom: -22%;
+  height: 55%;
+  background: radial-gradient(ellipse at 50% 5%, #9bcae111, transparent 50%);
+  border-top: 1px solid #91bbcf0c;
+  border-radius: 50%;
+  filter: blur(1px);
+  transform: rotate(-5deg);
+  z-index: -1;
+}
+.orbital {
+  position: absolute;
+  border: 1px solid #9dc9dd0b;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.orbital-one {
+  left: 14%;
+  top: 60%;
+  width: 89%;
+  height: 31%;
+  transform: rotate(-13deg);
+}
+.orbital-two {
+  left: 30%;
+  top: 65%;
+  width: 72%;
+  height: 21%;
+  transform: rotate(-13deg);
+}
+.orbital::after {
+  content: "+";
+  position: absolute;
+  left: 70%;
+  top: 2%;
+  font: 14px var(--mono);
+  color: #a0c3d52b;
+}
+.field-coordinate {
+  position: absolute;
+  font: 8px/1.9 var(--mono);
+  letter-spacing: 1px;
+  color: #91acba;
+}
+.coordinate-left {
+  left: 4%;
+  bottom: 9%;
+}
+.coordinate-right {
+  right: 4%;
+  top: 43%;
+  writing-mode: vertical-rl;
+  line-height: 2;
+  letter-spacing: 1.6px;
+}
+#scene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+#scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.webgl-ready #scene canvas {
+  opacity: 1;
+}
+.portal {
+  --size: 160px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 220px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 5px;
+  border-radius: 4px;
+  isolation: isolate;
+  transition: opacity 0.3s;
+}
+.portal-about {
+  left: 22%;
+  top: 78%;
+  --size: 148px;
+}
+.portal-projects {
+  left: 63%;
+  top: 45%;
+  --size: 355px;
+  width: 360px;
+}
+.portal-skills {
+  left: 85%;
+  top: 20%;
+  --size: 135px;
+}
+.portal-education {
+  left: 85%;
+  top: 74%;
+  --size: 167px;
+}
+.portal-contact {
+  left: 51%;
+  top: 85%;
+  --size: 101px;
+}
+.object-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  flex-shrink: 0;
+  margin-bottom: 8px;
+  pointer-events: none;
+}
+.object-art::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 13%;
+  width: 74%;
+  height: 15px;
+  background: #8ac9ef;
+  border-radius: 50%;
+  filter: blur(22px);
+  opacity: 0.07;
+}
+.object-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-size: 11px;
+  white-space: nowrap;
+  position: relative;
+}
+.object-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #a3c6d72b;
+  transition:
+    background 0.3s,
+    transform 0.4s;
+  transform-origin: left;
+}
+.object-number {
+  font: 8px var(--mono);
+  color: var(--muted);
+  margin-right: 1px;
+}
+.object-label .icon {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.45s var(--ease);
+  margin-left: 12px;
+  color: var(--green);
+}
+.object-hint {
+  font: 8px var(--mono);
+  color: #91a9b7;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: 0.35s;
+  text-align: center;
+  white-space: nowrap;
+}
+.portal:hover .object-label::before,
+.portal:focus-visible .object-label::before {
+  background: #b7e0f2;
+  transform: scaleX(1.06);
+}
+.portal:hover .object-label .icon,
+.portal:focus-visible .object-label .icon {
+  transform: rotate(90deg);
+}
+.portal:hover .object-hint,
+.portal:focus-visible .object-hint {
+  opacity: 1;
+  transform: none;
+}
+.portal-projects .object-label {
+  font-size: 13px;
+  gap: 15px;
+}
+.portal-projects .object-label::after {
+  content: "Explore";
+  position: absolute;
+  font: 8px var(--mono);
+  letter-spacing: 0.7px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #a8d2e3;
+  opacity: 0.8;
+}
+.portal-projects .object-label .icon {
+  width: 15px;
+  height: 15px;
+}
+.portal-projects .object-hint {
+  opacity: 1;
+}
+.world-caption {
+  position: absolute;
+  bottom: 3.5%;
+  left: 67%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 9px var(--mono);
+  color: #9bb5c4;
+  white-space: nowrap;
+}
+.world-caption .status-dot {
+  width: 3px;
+  height: 3px;
+  box-shadow: none;
+}
+/* CSS specimens are always present underneath WebGL and are the mobile experience. */
+.fallback-shape {
+  display: block;
+  width: 63%;
+  height: 84%;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #e8faffb0 0%,
+    #8ec7e344 21%,
+    #33576a70 22%,
+    #a0dcf47a 46%,
+    #2d577980 47%,
+    #b8e3f577 78%,
+    #defaffaa
+  );
+  clip-path: polygon(38% 0, 78% 15%, 100% 66%, 65% 100%, 14% 81%, 0 24%);
+  filter: drop-shadow(0 0 10px #abdfff22);
+  transform: rotate(-16deg);
+  transition: transform 0.6s var(--ease);
+}
+.fallback-shape::before {
+  content: "";
+  position: absolute;
+  inset: 14% 18%;
+  background:
+    linear-gradient(35deg, transparent 46%, #ddf7ff99 47%, transparent 48%),
+    linear-gradient(
+      125deg,
+      #caefff3d,
+      transparent 48%,
+      #d6faff88 49%,
+      transparent 50%
+    );
+  border: 1px solid #cdeeff99;
+  clip-path: polygon(20% 0, 100% 20%, 80% 100%, 0 60%);
+}
+.fallback-shape::after {
+  content: "";
+  position: absolute;
+  inset: 38% 10% 15% 15%;
+  border-top: 1px solid #e8fbff99;
+  transform: rotate(32deg);
+  box-shadow:
+    0 15px 0 #dcf6ff44,
+    0 -14px 0 #dcf6ff22;
+}
+.art-projects .fallback-shape {
+  width: 67%;
+  height: 88%;
+  clip-path: polygon(
+    23% 2%,
+    51% 0,
+    57% 15%,
+    68% 8%,
+    89% 28%,
+    81% 59%,
+    100% 70%,
+    73% 94%,
+    57% 72%,
+    40% 100%,
+    6% 78%,
+    0 33%
+  );
+  background:
+    linear-gradient(
+      75deg,
+      transparent 40%,
+      #dff7ffcc 40.5%,
+      #254254aa 43%,
+      #d0f4ffaa 44%,
+      #7ebfe438 68%,
+      #ddf8ff99 70%
+    ),
+    linear-gradient(
+      145deg,
+      #d2f4ffc9,
+      #35557488 37%,
+      #a2d1e780 38%,
+      #81b3ce55 69%,
+      #d8f9ffb3 70%,
+      #35688666
+    );
+}
+.art-about .fallback-shape {
+  width: 62%;
+  height: 74%;
+  border-radius: 48% 52% 45% 55%;
+  clip-path: none;
+  transform: rotate(-32deg);
+  background: linear-gradient(
+    135deg,
+    #eefcffaa,
+    #5385a244 33%,
+    #c9f1ffaa 65%,
+    #22475e
+  );
+  box-shadow:
+    inset 6px 3px 6px #dcf7ff7a,
+    inset -8px -9px 8px #041a2e,
+    2px 3px 12px #9ed6f51a;
+  mask: radial-gradient(ellipse 33% 35% at 48% 51%, transparent 98%, #000 100%);
+}
+.art-about .fallback-shape::before,
+.art-about .fallback-shape::after {
+  display: none;
+}
+.art-skills .fallback-shape {
+  height: 66%;
+  width: 66%;
+  clip-path: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 47%,
+      #072134 48% 52%,
+      transparent 53%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 47%,
+      #072134 48% 52%,
+      transparent 53%
+    ),
+    linear-gradient(135deg, #d6f1ffcc, #305a7755 36%, #9ed7f1bb 70%, #548dad66);
+  border: 1px solid #bae6fa88;
+  transform: rotate(-18deg) skew(9deg, 9deg);
+  box-shadow:
+    8px 10px 0 #38678488,
+    9px 11px 0 #e2f9ff66;
+}
+.art-skills .fallback-shape::before {
+  inset: 0;
+  border: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 49%,
+    #c1ebfc66 50%,
+    transparent 51%
+  );
+}
+.art-skills .fallback-shape::after {
+  display: none;
+}
+.art-education .fallback-shape {
+  width: 46%;
+  height: 75%;
+  clip-path: polygon(
+    38% 0,
+    70% 9%,
+    75% 35%,
+    92% 44%,
+    91% 59%,
+    100% 67%,
+    98% 86%,
+    55% 100%,
+    0 81%,
+    2% 63%,
+    10% 48%,
+    20% 40%,
+    23% 14%
+  );
+  transform: rotate(-10deg);
+  background: repeating-linear-gradient(
+    0deg,
+    #80b2ce77 0 14%,
+    #e3f7ffbb 15% 18%,
+    #132e40 19% 24%
+  );
+}
+.art-contact .fallback-shape {
+  height: 65%;
+  width: 62%;
+  transform: rotate(17deg);
+  background: radial-gradient(
+    circle at 48% 45%,
+    #f0fbff 0%,
+    #aeecff 8%,
+    #58b9f138 35%,
+    #b4e8ff77 54%,
+    #305d7e55 65%,
+    #bce8ffbd 90%
+  );
+}
+.webgl-ready .fallback-shape {
+  opacity: 0;
+}
+.portal:hover .fallback-shape {
+  filter: brightness(1.2);
+}
+.world-footer {
+  position: relative;
+  z-index: 4;
+  margin: 0 4%;
+  padding: 21px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+  transition: opacity 0.4s;
+}
+.footer-note {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 11px;
+}
+.footer-note small {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.compass {
+  font-size: 29px;
+  font-weight: 300;
+  color: var(--green);
+}
+.view-switch {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  border: 1px solid var(--line);
+  padding: 4px;
+  border-radius: 30px;
+  gap: 2px;
+  background: #11232d66;
+}
+.view-switch button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 10px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+.view-switch .icon {
+  width: 14px;
+  height: 14px;
+}
+.view-switch button[aria-pressed="true"] {
+  background: #c3dfed;
+  color: #122633;
+}
+.footer-controls {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.edition {
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.9;
+}
+.edition > span {
+  font: 8px var(--mono);
+  color: var(--muted);
+}
+.index-view {
+  position: relative;
+  z-index: 4;
+  width: min(650px, 52%);
+  margin: 65px 7% 60px auto;
+  padding: 0;
+}
+.index-view > a {
+  display: grid;
+  grid-template-columns: 32px 1fr 22px;
+  gap: 10px 18px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 24px 10px;
+  transition:
+    padding 0.4s var(--ease),
+    background 0.3s;
+}
+.index-view > a:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.index-view > a:hover {
+  padding-left: 22px;
+  background: #a7d2ea08;
+}
+.index-view > a > span {
+  font: 10px var(--mono);
+  color: var(--muted);
+  grid-row: 1/3;
+}
+.index-view strong {
+  font-size: 27px;
+  font-weight: 450;
+  letter-spacing: -0.8px;
+}
+.index-view small {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 10px;
+}
+.index-view .icon {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+.world-focusing .intro {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+.world-focusing .intro a {
+  pointer-events: none;
+}
+.world-focusing .world-footer,
+.world-focusing .field-coordinate,
+.world-focusing .world-caption {
+  opacity: 0.2;
+}
+.world-focusing .portal {
+  opacity: 0;
+  pointer-events: none;
+}
+.world-focusing .portal.is-selected {
+  opacity: 1;
+}
+.world-focusing .portal.is-selected .object-label,
+.world-focusing .portal.is-selected .object-hint {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.world-returning .intro {
+  transition-delay: 0.14s;
+}
+.world-ready .intro-title {
+  animation: world-arrive 0.9s var(--ease) both;
+}
+.world-ready .intro-note {
+  animation: world-arrive 1.1s 0.1s var(--ease) both;
+}
+@keyframes world-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (min-width: 1650px) {
+  .intro {
+    top: 90px;
+  }
+  .portal-projects {
+    --size: 430px;
+    width: 420px;
+  }
+  .portal-about {
+    --size: 180px;
+  }
+  .portal-skills {
+    --size: 165px;
+  }
+  .portal-education {
+    --size: 200px;
+  }
+  .portal-contact {
+    --size: 125px;
+  }
+}
+@media (min-width: 761px) and (max-height: 830px) {
+  .site-header {
+    height: 76px;
+  }
+  .world {
+    height: calc(100svh - 76px);
+    min-height: 685px;
+  }
+  .intro {
+    top: 43px;
+    left: 6%;
+  }
+  h1 {
+    font-size: 94px;
+    margin: 24px 0;
+  }
+  .hero-statement {
+    font-size: 15px;
+  }
+  .hero-bio {
+    font-size: 10px;
+  }
+  .hero-project-link {
+    margin-top: 20px;
+  }
+  .portal-projects {
+    top: 42%;
+    --size: 300px;
+    width: 305px;
+  }
+  .portal-about {
+    --size: 120px;
+    top: 81%;
+    left: 24%;
+  }
+  .portal-skills {
+    --size: 117px;
+    top: 20%;
+  }
+  .portal-education {
+    --size: 139px;
+  }
+  .portal-contact {
+    --size: 90px;
+    top: 86%;
+  }
+  .world-footer {
+    min-height: 78px;
+    padding: 16px 0;
+  }
+  .object-hint {
+    font-size: 7px;
+  }
+  .world-caption {
+    bottom: 2%;
+    font-size: 8px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .intro {
+    left: 5%;
+    max-width: 330px;
+  }
+  h1 {
+    font-size: 92px;
+    letter-spacing: -5px;
+  }
+  .title-star {
+    right: -22px;
+    font-size: 27px;
+  }
+  .intro .eyebrow {
+    font-size: 8px;
+  }
+  .hero-statement {
+    font-size: 15px;
+  }
+  .hero-bio {
+    font-size: 10px;
+    max-width: 250px;
+  }
+  .portal {
+    width: 180px;
+  }
+  .portal-projects {
+    left: 63%;
+    top: 44%;
+    --size: 270px;
+    width: 280px;
+  }
+  .portal-skills {
+    left: 86%;
+    top: 14%;
+    --size: 108px;
+  }
+  .portal-education {
+    left: 87%;
+    top: 79%;
+    --size: 125px;
+  }
+  .portal-about {
+    left: 21%;
+    top: 82%;
+    --size: 128px;
+  }
+  .portal-contact {
+    left: 52%;
+    top: 85%;
+    --size: 92px;
+  }
+  .header-location {
+    font-size: 9px;
+  }
+  .edition {
+    display: none;
+  }
+  .field-coordinate {
+    display: none;
+  }
+  .object-hint {
+    font-size: 7px;
+  }
+  .world-caption {
+    left: 63%;
+    bottom: 0;
+  }
+  .index-view {
+    width: 49%;
+    margin-right: 4%;
+    margin-top: 80px;
+  }
+  .index-view strong {
+    font-size: 23px;
+  }
+}
+@media (max-width: 760px) {
+  .site-header {
+    height: 76px;
+    padding: 0 6%;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    background: #09151df2;
+    backdrop-filter: blur(12px);
+  }
+  .identity {
+    font-size: 11px;
+    gap: 10px;
+  }
+  .identity img {
+    width: 31px;
+    height: 31px;
+  }
+  .identity small {
+    font-size: 8px;
+    max-width: 180px;
+  }
+  .header-location {
+    display: none;
+  }
+  .contact-link {
+    padding: 10px 0;
+    font-size: 10px;
+    gap: 13px;
+  }
+  .contact-link .icon {
+    width: 15px;
+    height: 15px;
+  }
+  .world {
+    height: auto;
+    min-height: calc(100svh - 76px);
+    background:
+      radial-gradient(ellipse at 75% 35%, #2148604d, transparent 55%), #09151d;
+  }
+  .intro {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: none;
+    padding: 36px 7% 10px;
+  }
+  .intro .eyebrow {
+    font-size: 8px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(70px, 17vw, 104px);
+    line-height: 0.96;
+    letter-spacing: -4px;
+    margin: 20px 0 20px;
+  }
+  h1 > span:not(.title-star) {
+    letter-spacing: -1px;
+  }
+  .title-star {
+    left: 245px;
+    right: auto;
+    top: 25px;
+    font-size: 25px;
+  }
+  .hero-statement {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+  }
+  .hero-statement br {
+    display: none;
+  }
+  .hero-statement em {
+    display: block;
+  }
+  .hero-bio {
+    font-size: 10px;
+    max-width: 290px;
+  }
+  .hero-project-link {
+    display: none;
+  }
+  .exploration {
+    flex: auto;
+    min-height: 0;
+  }
+  .world-stage {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 0 6% 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 16px;
+  }
+  .portal {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 13px;
+    min-height: 195px;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    --size: 115px;
+  }
+  .portal-projects {
+    grid-column: 1/-1;
+    order: -1;
+    --size: 235px;
+    min-height: 305px;
+    padding: 0;
+    align-items: flex-start;
+    border-bottom: 1px solid #a7d6ec40;
+    margin-bottom: 7px;
+  }
+  .portal-projects .object-art {
+    align-self: center;
+    margin: 0;
+    height: 230px;
+    width: 235px;
+  }
+  .portal-projects::before {
+    content: "01—03 / Selected work";
+    font: 8px var(--mono);
+    color: var(--muted);
+    position: absolute;
+    left: 0;
+    top: 29px;
+    width: 60px;
+    line-height: 1.8;
+  }
+  .portal-projects::after {
+    content: "Explore";
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #a8d7ee66;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font: 8px var(--mono);
+    color: var(--green);
+  }
+  .portal-projects .object-label {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    width: 100%;
+    padding: 5px 0 10px;
+  }
+  .portal-projects .object-label::before,
+  .portal-projects .object-label::after {
+    display: none;
+  }
+  .portal-projects .object-label .icon {
+    margin-left: auto;
+    width: 19px;
+    height: 19px;
+  }
+  .portal-projects .object-hint {
+    max-width: none;
+    font-size: 9px;
+    margin: 0 0 18px;
+  }
+  .portal-about {
+    --size: 108px;
+  }
+  .portal-skills {
+    --size: 109px;
+  }
+  .portal-education {
+    --size: 126px;
+  }
+  .portal-contact {
+    --size: 112px;
+  }
+  .object-art {
+    align-self: center;
+    margin: 3px 0 10px;
+  }
+  .object-art::after {
+    bottom: 0;
+    filter: blur(15px);
+  }
+  .object-label {
+    font-size: 12px;
+    gap: 8px;
+    padding: 7px 0;
+    width: 100%;
+  }
+  .object-label::before {
+    display: none;
+  }
+  .object-label .icon {
+    margin-left: auto;
+    width: 13px;
+    height: 13px;
+  }
+  .object-number {
+    font-size: 7px;
+  }
+  .object-hint {
+    font-size: 7px;
+    line-height: 1.65;
+    white-space: normal;
+    opacity: 1;
+    transform: none;
+    text-align: left;
+    margin-top: 4px;
+    max-width: 145px;
+    min-height: 23px;
+  }
+  .orbital,
+  .field-coordinate,
+  .field-horizon {
+    display: none;
+  }
+  .world-caption {
+    grid-column: 1/-1;
+    position: relative;
+    inset: auto;
+    transform: none;
+    justify-content: center;
+    font-size: 8px;
+    margin-top: 14px;
+  }
+  .world-footer {
+    margin: 0 6%;
+    padding: 20px 0 22px;
+    min-height: 110px;
+    flex-wrap: wrap;
+    gap: 16px 10px;
+  }
+  .footer-note {
+    font-size: 10px;
+    gap: 10px;
+    flex: 1;
+  }
+  .footer-note small {
+    font-size: 8px;
+    line-height: 1.5;
+    max-width: 135px;
+  }
+  .compass {
+    font-size: 22px;
+  }
+  .view-switch {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-left: 0;
+  }
+  .view-switch button {
+    min-height: 44px;
+    padding: 9px 11px;
+    font-size: 9px;
+    gap: 6px;
+  }
+  .view-switch .icon {
+    width: 12px;
+    height: 12px;
+  }
+  .footer-controls {
+    gap: 0;
+  }
+  .footer-controls .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+  .edition {
+    display: none;
+  }
+  .webgl-ready .fallback-shape {
+    opacity: 1;
+  }
+  #scene {
+    display: none;
+  }
+  .index-view {
+    width: auto;
+    max-width: none;
+    margin: 28px 7% 38px;
+    padding: 0;
+  }
+  .index-view > a {
+    padding: 22px 0;
+    grid-template-columns: 25px 1fr 20px;
+    gap: 7px 15px;
+  }
+  .index-view strong {
+    font-size: 24px;
+  }
+  .index-view small {
+    font-size: 9px;
+  }
+  .world-focusing .intro {
+    transform: none;
+  }
+  .world-focusing .portal.is-selected .fallback-shape {
+    transform: rotate(0) scale(1.09);
+    filter: brightness(1.5);
+  }
+  .world-focusing .portal.is-selected .object-label,
+  .world-focusing .portal.is-selected .object-hint {
+    opacity: 0.3;
+  }
+}
+@media (max-width: 380px) {
+  .identity small {
+    font-size: 7px;
+    max-width: 135px;
+  }
+  .footer-note {
+    flex-basis: 100%;
+  }
+  .view-switch {
+    margin-right: auto;
+  }
+  .portal-projects .object-label {
+    font-size: 18px;
+  }
+  .title-star {
+    left: 230px;
+  }
+  .object-label {
+    font-size: 11px;
+  }
+  .object-hint {
+    font-size: 7px;
+  }
+}
+
+/* Planetary universe refinement: CSS worlds are the intentional mobile/WebGL fallback. */
+.site-header {
+  background: #030611;
+  border-bottom-color: #9bb8ee14;
+}
+.world {
+  background:
+    radial-gradient(ellipse at 72% 38%, #18245258, transparent 38%),
+    radial-gradient(ellipse at 19% 72%, #27184634, transparent 45%),
+    radial-gradient(ellipse at 55% 100%, #071a343d, transparent 52%), #02040d;
+}
+.world::before {
+  opacity: 0.24;
+  background-image:
+    radial-gradient(circle at 14% 23%, #d6e6ffcc 0 1px, transparent 1.6px),
+    radial-gradient(circle at 73% 18%, #b8c9ffbb 0 1px, transparent 1.5px),
+    radial-gradient(circle at 83% 65%, #ffffff99 0 1px, transparent 1.5px),
+    radial-gradient(circle at 38% 81%, #96b5ff88 0 1px, transparent 1.4px),
+    radial-gradient(circle at 56% 39%, #ffffffbb 0 1px, transparent 1.5px);
+  background-size:
+    179px 137px,
+    241px 193px,
+    307px 227px,
+    383px 281px,
+    509px 347px;
+}
+.field-horizon {
+  bottom: -30%;
+  background: radial-gradient(ellipse at 50% 15%, #192e7040, transparent 60%);
+  border-color: #7295df11;
+}
+.orbital {
+  border-color: #8eaef313;
+}
+.coordinate-right {
+  color: #a8b9ea;
+}
+.object-art::after {
+  background: #8daaff;
+  opacity: 0.12;
+}
+.fallback-shape {
+  width: 74%;
+  height: 74%;
+  clip-path: none;
+  border-radius: 50%;
+  transform: none;
+  border: 1px solid #a5d5ff55;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      #dffaff 0 2%,
+      #6eb5db 6%,
+      transparent 30%
+    ),
+    radial-gradient(circle at 68% 74%, #1f5e87 0 8%, transparent 38%),
+    linear-gradient(135deg, #8dd8ef, #0b4a79 55%, #03111e);
+  box-shadow:
+    inset -18px -13px 25px #000a,
+    inset 9px 7px 15px #e4f9ff66,
+    0 17px 27px #0008;
+  filter: none;
+}
+.fallback-shape::before {
+  inset: -7%;
+  border: 1px solid #91c9ff88;
+  border-radius: 50%;
+  clip-path: none;
+  background: radial-gradient(
+    circle at 38% 28%,
+    transparent 54%,
+    #89c8ff1e 69%,
+    transparent 70%
+  );
+}
+.fallback-shape::after {
+  display: none;
+}
+.art-projects .fallback-shape {
+  width: 86%;
+  height: 86%;
+  clip-path: none;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+      ellipse at 38% 45%,
+      transparent 0 9%,
+      #ff7a3c88 9.5% 10%,
+      transparent 10.7% 17%
+    ),
+    radial-gradient(circle at 30% 20%, #bc6540 0 4%, transparent 25%),
+    radial-gradient(circle at 68% 68%, #642632 0 21%, transparent 46%),
+    linear-gradient(135deg, #401d28, #150b14 66%, #02030a);
+  box-shadow:
+    inset -25px -17px 27px #000d,
+    inset 8px 7px 18px #ffb46b33,
+    0 0 33px #ff5a2840;
+}
+.art-projects .fallback-shape::before {
+  border-color: #ff956677;
+  background: radial-gradient(
+    circle,
+    transparent 55%,
+    #ff7b4225 70%,
+    transparent 71%
+  );
+}
+.art-about .fallback-shape {
+  width: 76%;
+  height: 76%;
+  border-radius: 50%;
+  transform: none;
+  mask: none;
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      #f2ffff 0 3%,
+      #a7e2ec 8%,
+      transparent 31%
+    ),
+    linear-gradient(135deg, #6bc8df, #0d4e82 57%, #020918);
+}
+.art-skills .fallback-shape {
+  width: 74%;
+  height: 74%;
+  clip-path: none;
+  border-radius: 50%;
+  transform: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 16%,
+      #8fffe055 16.8% 17.5%,
+      transparent 18% 33%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 16%,
+      #8fffe055 16.8% 17.5%,
+      transparent 18% 33%
+    ),
+    radial-gradient(circle at 32% 24%, #c3ffff 0 3%, transparent 32%),
+    linear-gradient(135deg, #19788a, #061a2b 67%);
+}
+.art-education .fallback-shape {
+  width: 82%;
+  height: 82%;
+  clip-path: none;
+  border-radius: 50%;
+  transform: none;
+  background: repeating-linear-gradient(
+    0deg,
+    #3b2b58 0 12%,
+    #8d5f91 13% 23%,
+    #d3948d 25% 29%,
+    #41305c 31% 39%
+  );
+}
+.art-contact .fallback-shape {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  transform: none;
+  background:
+    radial-gradient(
+      circle at 37% 29%,
+      #fff7ff 0 3%,
+      #d0a9ff 9%,
+      transparent 34%
+    ),
+    linear-gradient(135deg, #9b75c6, #251444 68%, #05020f);
+  box-shadow:
+    inset -15px -12px 25px #000b,
+    inset 8px 6px 14px #e5cbff66,
+    0 0 28px #b38aff66;
+}
+.portal:hover .fallback-shape {
+  filter: brightness(1.18);
+}
+@media (max-width: 760px) {
+  .world {
+    background:
+      radial-gradient(ellipse at 82% 31%, #17285c7a, transparent 43%),
+      radial-gradient(ellipse at 18% 71%, #30185847, transparent 51%), #02040d;
+  }
+  .portal-projects .fallback-shape {
+    width: 92%;
+    height: 92%;
+  }
+  .portal-projects::before {
+    content: "01—03 /\A Selected worlds";
+    white-space: pre-line;
+  }
+  .portal-projects::after {
+    border-color: #9ab9ff88;
+    color: #c6d8ff;
+  }
+}
+
+/* The planetary scene supplies depth; remove the former ice-field guide marks. */
+.field-horizon,
+.orbital,
+.field-coordinate {
+  display: none;
+}
+
+/* Cinematic spatial composition: the world leads and interface details emerge on approach. */
+@media (min-width: 761px) {
+  .site-header {
+    border-bottom-color: transparent;
+    background: linear-gradient(180deg, #030611 72%, #030611e8);
+  }
+  .world {
+    background:
+      radial-gradient(ellipse at 76% 40%, #1824524a, transparent 34%),
+      radial-gradient(ellipse at 7% 88%, #1d34513b, transparent 34%),
+      radial-gradient(ellipse at 100% 89%, #32174635, transparent 37%),
+      radial-gradient(ellipse at 51% 112%, #071a3438, transparent 51%), #02040d;
+  }
+  .world::before {
+    opacity: 0.18;
+  }
+  .intro {
+    left: 5.2%;
+    top: 7.5%;
+    z-index: 2;
+    max-width: 405px;
+  }
+  .intro .eyebrow {
+    opacity: 0.68;
+  }
+  h1 {
+    max-width: 390px;
+    font-size: clamp(78px, 7.35vw, 110px);
+    line-height: 0.93;
+    color: #e4edf2e8;
+    text-shadow: 0 12px 42px #01030a99;
+  }
+  h1 > span:not(.title-star) {
+    color: #c9d9e3e3;
+  }
+  .intro-note {
+    opacity: 0.78;
+  }
+  .portal {
+    --size: 120px;
+    --hit-size: 144px;
+    --label-y: 72px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    width: var(--hit-size);
+    height: var(--hit-size);
+    padding: 0;
+    border-radius: 50%;
+    overflow: visible;
+  }
+  .portal-about {
+    left: 8%;
+    top: 93%;
+    --size: 230px;
+    --hit-size: 250px;
+    --label-y: -148px;
+  }
+  .portal-projects {
+    left: 70%;
+    top: 44%;
+    --size: 430px;
+    --hit-size: 430px;
+    --label-y: 176px;
+  }
+  .portal-skills {
+    left: 83%;
+    top: 8%;
+    --size: 88px;
+    --hit-size: 110px;
+    --label-y: 58px;
+  }
+  .portal-education {
+    left: 99%;
+    top: 83%;
+    --size: 330px;
+    --hit-size: 210px;
+    --label-y: -150px;
+  }
+  .portal-contact {
+    left: 48%;
+    top: 80%;
+    --size: 72px;
+    --hit-size: 96px;
+    --label-y: 52px;
+  }
+  .portal-education .object-label,
+  .portal-education .object-hint {
+    left: 10%;
+  }
+  .object-art {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+  .object-art::after {
+    opacity: 0.045;
+  }
+  .object-label,
+  .object-hint {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    text-shadow: 0 2px 12px #01030acc;
+    transition:
+      opacity 0.35s,
+      transform 0.55s var(--ease);
+  }
+  .object-label {
+    top: calc(50% + var(--label-y));
+    gap: 8px;
+    padding: 0;
+    font: 550 10px/1.2 var(--font);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transform: translate(-50%, 9px);
+  }
+  .object-label::before,
+  .portal-projects .object-label::after,
+  .object-label .icon {
+    display: none;
+  }
+  .object-number {
+    margin: 0 3px 0 0;
+    font-size: 7px;
+    color: #9bacbc;
+  }
+  .object-hint,
+  .portal-projects .object-hint {
+    top: calc(50% + var(--label-y) + 22px);
+    margin: 0;
+    color: #8095a6;
+    font-size: 7px;
+    transform: translate(-50%, 7px);
+  }
+  .portal:hover .object-label,
+  .portal:focus-visible .object-label,
+  .portal:hover .object-hint,
+  .portal:focus-visible .object-hint {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  .portal:focus-visible {
+    outline: 0;
+  }
+  .portal:focus-visible .object-label {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7px;
+  }
+  .world-caption {
+    display: none;
+  }
+  .world-footer {
+    min-height: 80px;
+    padding: 17px 0;
+    border-top-color: #9db5e512;
+    background: linear-gradient(180deg, transparent, #02040d52);
+  }
+  .footer-note,
+  .edition {
+    opacity: 0.58;
+  }
+  .view-switch {
+    border-color: #a2b9e31a;
+    background: #08101d8c;
+    backdrop-filter: blur(12px);
+  }
+}
+
+@media (min-width: 1650px) {
+  .portal-projects {
+    left: 69%;
+    top: 45%;
+    --size: 500px;
+    --hit-size: 500px;
+    --label-y: 205px;
+  }
+  .portal-about {
+    --size: 280px;
+    --hit-size: 295px;
+    --label-y: -175px;
+  }
+  .portal-skills {
+    --size: 100px;
+    --hit-size: 126px;
+  }
+  .portal-education {
+    left: 100%;
+    top: 84%;
+    --size: 380px;
+    --hit-size: 230px;
+    --label-y: -170px;
+  }
+  .portal-contact {
+    --size: 80px;
+    --hit-size: 104px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .intro {
+    left: 4.5%;
+    max-width: 315px;
+  }
+  h1 {
+    max-width: 310px;
+    font-size: 82px;
+  }
+  .portal-projects {
+    left: 68%;
+    top: 42%;
+    --size: 310px;
+    --hit-size: 310px;
+    --label-y: 128px;
+  }
+  .portal-about {
+    left: 7%;
+    top: 94%;
+    --size: 195px;
+    --hit-size: 210px;
+    --label-y: -126px;
+  }
+  .portal-skills {
+    left: 88%;
+    top: 8%;
+    --size: 70px;
+    --hit-size: 96px;
+    --label-y: 50px;
+  }
+  .portal-education {
+    left: 100%;
+    top: 86%;
+    --size: 270px;
+    --hit-size: 170px;
+    --label-y: -125px;
+  }
+  .portal-contact {
+    left: 43%;
+    top: 83%;
+    --size: 64px;
+    --hit-size: 90px;
+    --label-y: 48px;
+  }
+}
+
+@media (min-width: 1101px) and (max-height: 830px) {
+  .intro {
+    top: 5.5%;
+  }
+  h1 {
+    font-size: 88px;
+  }
+  .portal-projects {
+    left: 68%;
+    top: 43%;
+    --size: 350px;
+    --hit-size: 350px;
+    --label-y: 145px;
+  }
+  .portal-about {
+    left: 8%;
+    top: 92%;
+    --size: 190px;
+    --hit-size: 205px;
+    --label-y: -123px;
+  }
+  .portal-skills {
+    left: 86%;
+    top: 7%;
+    --size: 82px;
+    --hit-size: 108px;
+    --label-y: 54px;
+  }
+  .portal-education {
+    left: 99%;
+    top: 86%;
+    --size: 270px;
+    --hit-size: 190px;
+    --label-y: -125px;
+  }
+  .portal-contact {
+    left: 48%;
+    top: 84%;
+    --size: 66px;
+    --hit-size: 90px;
+    --label-y: 48px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) and (max-height: 830px) {
+  h1 {
+    font-size: 78px;
+  }
+  .portal-projects {
+    left: 70%;
+    top: 43%;
+    --size: 320px;
+    --hit-size: 320px;
+    --label-y: 132px;
+  }
+  .portal-about {
+    left: 6%;
+    top: 94%;
+    --size: 165px;
+    --hit-size: 190px;
+    --label-y: -112px;
+  }
+  .portal-skills {
+    left: 88%;
+    top: 7%;
+    --size: 72px;
+    --hit-size: 96px;
+    --label-y: 50px;
+  }
+  .portal-education {
+    left: 100%;
+    top: 86%;
+    --size: 250px;
+    --hit-size: 160px;
+    --label-y: -116px;
+  }
+  .portal-contact {
+    left: 45%;
+    top: 84%;
+    --size: 64px;
+    --hit-size: 88px;
+    --label-y: 48px;
+  }
+}

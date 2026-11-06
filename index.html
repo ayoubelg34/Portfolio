@@ -1,362 +1,923 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ayoub El Ghazi - 4th year software engineering and management student looking for a 2025 internship." />
-    <title>Ayoub El Ghazi | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="theme-color" content="#09151d" />
+    <meta
+      name="description"
+      content="Explore Ayoub El Ghazi's world: software engineering, creative experiments, and academic projects at the intersection of technology and people. Based in Montpellier, France."
+    />
+    <meta
+      property="og:title"
+      content="Ayoub El Ghazi — Ideas below the surface"
+    />
+    <meta
+      property="og:description"
+      content="An independent world of software, systems, and curiosity. Explore the projects and practice of Ayoub El Ghazi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <title>Ayoub El Ghazi — Ideas below the surface</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/monogram.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script type="module" src="/assets/js/main.js"></script>
   </head>
   <body>
-    <header class="site-header" data-section="hero">
-      <div class="wrapper">
-        <nav class="site-nav">
-          <a class="logo" href="#hero">ayoub.dev</a>
-          <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-            <span class="sr-only">Open navigation</span>
-            <span class="nav-toggle-bar"></span>
-          </button>
-          <ul id="primary-menu" class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">Profile</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#languages">Languages</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div id="hero" class="hero">
-          <div class="hero-text reveal" data-reveal="up">
-            <p class="eyebrow">Ayoub El Ghazi | DAMS4 student</p>
-            <h1>4th year software engineering & management student</h1>
-            <p class="tagline">Actively seeking a 4-month internship from April to August 2025 to bring a dual expertise in software engineering and team/project management.</p>
-            <div class="hero-actions">
-              <a class="btn primary magnetic" href="#projects">Explore my work</a>
-              <a class="btn ghost magnetic" href="#contact">Get in touch</a>
+    <svg
+      class="svg-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-diagonal" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-world" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <ellipse cx="12" cy="12" rx="4" ry="9" />
+        <path d="M3 12h18" />
+      </symbol>
+      <symbol id="i-index" viewBox="0 0 24 24">
+        <path d="M9 6h12M9 12h12M9 18h12M3 6h1M3 12h1M3 18h1" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M6 18 18 6" />
+      </symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24">
+        <path d="M9 5v14M15 5v14" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" />
+      </symbol>
+    </svg>
+    <a class="skip-link" href="#explore">Skip to exploration</a>
+    <div id="site-shell">
+      <header class="site-header">
+        <a
+          class="identity"
+          href="#world"
+          aria-label="Ayoub El Ghazi, return to world"
+        >
+          <img src="/assets/icons/monogram.svg" width="42" height="42" alt="" />
+          <span
+            >Ayoub El Ghazi<small
+              >Software engineering &amp; management</small
+            ></span
+          >
+        </a>
+        <div class="header-location">
+          <span class="status-dot"></span> Montpellier, FR
+          <span class="local-time" aria-hidden="true"></span>
+        </div>
+        <a class="contact-link" href="#contact"
+          >Let's talk <svg class="icon"><use href="#i-diagonal" /></svg
+        ></a>
+      </header>
+      <main id="world" class="world">
+        <div class="intro">
+          <div class="intro-title">
+            <p class="eyebrow">
+              <span class="status-dot"></span> Software engineering &amp;
+              management
+            </p>
+            <h1>
+              Ayoub<br /><span>El Ghazi.</span
+              ><span class="title-star" aria-hidden="true">✳</span>
+            </h1>
+          </div>
+          <div class="intro-note">
+            <p class="hero-statement">
+              A curious mind.<br /><em>A universe of things to build.</em>
+            </p>
+            <p class="hero-bio">
+              Engineering student at Polytech Montpellier.<br />Exploring the
+              space between code, systems, and people.
+            </p>
+            <a class="hero-project-link" href="#projects" data-cursor="Explore"
+              >Explore my work <svg class="icon"><use href="#i-arrow" /></svg
+              ><span>03 projects</span></a
+            >
+          </div>
+        </div>
+        <div id="explore" class="exploration" tabindex="-1">
+          <div class="world-stage" aria-label="Explore Ayoub's universe">
+            <div id="scene" aria-hidden="true"></div>
+            <a class="portal portal-about" href="#about" data-object="about">
+              <span class="object-art art-about" aria-hidden="true"
+                ><span class="fallback-shape"></span
+              ></span>
+              <span class="object-label"
+                ><span class="object-number">01</span
+                ><span>About me</span> ></span
+              >
+              <span class="object-hint">A closer orbit</span>
+            </a>
+            <a
+              class="portal portal-projects"
+              href="#projects"
+              data-object="projects"
+            >
+              <span class="object-art art-projects" aria-hidden="true"
+                ><span class="fallback-shape"></span
+              ></span>
+              <span class="object-label"
+                ><span class="object-number">02</span
+                ><span>Selected work</span> ></span
+              >
+              <span class="object-hint">Three worlds of work</span>
+            </a>
+            <a class="portal portal-skills" href="#skills" data-object="skills">
+              <span class="object-art art-skills" aria-hidden="true"
+                ><span class="fallback-shape"></span
+              ></span>
+              <span class="object-label"
+                ><span class="object-number">03</span
+                ><span>My toolkit</span> ></span
+              >
+              <span class="object-hint">Tools in orbit</span>
+            </a>
+            <a
+              class="portal portal-education"
+              href="#education"
+              data-object="education"
+            >
+              <span class="object-art art-education" aria-hidden="true"
+                ><span class="fallback-shape"></span
+              ></span>
+              <span class="object-label"
+                ><span class="object-number">04</span
+                ><span>The journey</span> ></span
+              >
+              <span class="object-hint">A long trajectory</span>
+            </a>
+            <a
+              class="portal portal-contact"
+              href="#contact"
+              data-object="contact"
+            >
+              <span class="object-art art-contact" aria-hidden="true"
+                ><span class="fallback-shape"></span
+              ></span>
+              <span class="object-label"
+                ><span class="object-number">05</span
+                ><span>Say hello</span> ></span
+              >
+              <span class="object-hint">Open a signal</span>
+            </a>
+          </div>
+          <nav class="index-view" aria-label="Portfolio index" hidden>
+            <a href="#about"
+              ><span>01</span><strong>About me</strong
+              ><small>A closer orbit</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+            <a href="#projects"
+              ><span>02</span><strong>Selected work</strong
+              ><small>Three ideas, made real</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+            <a href="#skills"
+              ><span>03</span><strong>My toolkit</strong
+              ><small>Languages, tools &amp; methods</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+            <a href="#education"
+              ><span>04</span><strong>The journey</strong
+              ><small>An education in engineering</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+            <a href="#contact"
+              ><span>05</span><strong>Say hello</strong
+              ><small>Let's make something useful</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+          </nav>
+        </div>
+        <footer class="world-footer">
+          <div class="footer-note">
+            <span class="compass" aria-hidden="true">✳</span
+            ><span
+              >Explore Ayoub's universe.<small
+                >Hover to feel. Select to explore.</small
+              ></span
+            >
+          </div>
+          <div
+            class="view-switch require-js"
+            role="group"
+            aria-label="Exploration view"
+            hidden
+          >
+            <button data-view="world" aria-pressed="true">
+              <svg class="icon"><use href="#i-world" /></svg> World
+            </button>
+            <button data-view="index" aria-pressed="false">
+              <svg class="icon"><use href="#i-index" /></svg> Index
+            </button>
+          </div>
+          <div class="footer-controls">
+            <button
+              id="motion-toggle"
+              class="icon-button require-js"
+              aria-label="Pause motion"
+              aria-pressed="false"
+              hidden
+            >
+              <svg class="icon"><use href="#i-pause" /></svg></button
+            ><span class="edition"
+              >Ideas below the surface.<br /><span
+                >© <span data-year>2026</span> AYOUB EL GHAZI</span
+              ></span
+            >
+          </div>
+        </footer>
+      </main>
+      <!-- Semantic HTML is the content source of truth. Without JavaScript, every section remains readable below the world. -->
+      <div id="content-archive" class="content-archive">
+        <section
+          id="about"
+          class="chapter"
+          aria-labelledby="about-title"
+          data-number="01"
+          data-label="About me"
+        >
+          <p class="eyebrow">01 / THE PERSON BEHIND THE CODE</p>
+          <h2 id="about-title">
+            Engineering things.<br /><em>Connecting people.</em>
+          </h2>
+          <p class="chapter-lead">
+            I'm Ayoub El Ghazi, a software engineering and management student at
+            Polytech Montpellier.
+          </p>
+          <div class="about-layout">
+            <div class="about-monogram" aria-hidden="true">
+              <span>AE</span><small>MONTPELLIER, FRANCE</small
+              ><span class="corner-plus">+</span>
             </div>
-            <dl class="stats">
+            <div class="prose">
+              <p>
+                I like the space where good code meets human collaboration. My
+                work spans full-stack web platforms, networked applications, and
+                computer vision experiments.
+              </p>
+              <p>
+                I'm drawn to resilient architectures, quick prototypes, and
+                software that solves a clear problem. Along the way, I enjoy
+                helping a team find its rhythm: organising agile rituals,
+                sharing ideas, and turning feedback into improvements.
+              </p>
+              <a class="text-link" href="#projects"
+                >Discover what I've built
+                <svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="section-divider">
+            <h3>A few ways to say hello.</h3>
+            <span class="eyebrow">LANGUAGES</span>
+          </div>
+          <dl class="language-list">
+            <div>
+              <dt>French</dt>
+              <dd>Native</dd>
+            </div>
+            <div>
+              <dt>Berber</dt>
+              <dd>Native</dd>
+            </div>
+            <div>
+              <dt>English</dt>
+              <dd>TOEIC level</dd>
+            </div>
+            <div>
+              <dt>Spanish</dt>
+              <dd>Advanced</dd>
+            </div>
+            <div>
+              <dt>Arabic</dt>
+              <dd>Intermediate</dd>
+            </div>
+          </dl>
+        </section>
+        <section
+          id="projects"
+          class="chapter"
+          aria-labelledby="projects-title"
+          data-number="02"
+          data-label="Selected work"
+        >
+          <div class="work-intro">
+            <div>
+              <p class="eyebrow">02 / Selected academic work</p>
+              <h2 id="projects-title">Built from <em>curiosity.</em></h2>
+            </div>
+            <p>
+              Three different questions.<br />
+              Three things I built to explore them.
+            </p>
+          </div>
+          <div
+            class="project-selector require-js"
+            role="tablist"
+            aria-label="Select a project"
+            hidden
+          >
+            <button
+              id="tab-geo"
+              role="tab"
+              aria-controls="project-geo"
+              aria-selected="true"
+              tabindex="0"
+              data-project="geo"
+            >
+              <span>01</span><strong>Discover a place</strong
+              ><small>Web &amp; geospatial</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg>
+            </button>
+            <button
+              id="tab-network"
+              role="tab"
+              aria-controls="project-network"
+              aria-selected="false"
+              tabindex="-1"
+              data-project="network"
+            >
+              <span>02</span><strong>Make a connection</strong
+              ><small>Systems &amp; networks</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg>
+            </button>
+            <button
+              id="tab-vision"
+              role="tab"
+              aria-controls="project-vision"
+              aria-selected="false"
+              tabindex="-1"
+              data-project="vision"
+            >
+              <span>03</span><strong>Change the controls</strong
+              ><small>Computer vision</small
+              ><svg class="icon"><use href="#i-diagonal" /></svg>
+            </button>
+          </div>
+          <article
+            id="project-geo"
+            class="project project-geo"
+            data-project-panel="geo"
+          >
+            <div class="project-display">
+              <div class="project-visual geo-visual" aria-hidden="true">
+                <div class="visual-grid"></div>
+                <span class="visual-index">01</span>
+                <div class="geo-globe">
+                  <i></i><i></i><i></i><b></b><span class="globe-orbit"></span>
+                </div>
+                <div class="geo-reticle">
+                  <span>LOCATION FOUND</span><b>43.6108° N</b
+                  ><small>3.8767° E</small>
+                </div>
+                <span class="visual-caption">A WORLD WAITING TO BE FOUND</span
+                ><span class="visual-corner">+<br />+<br />+</span>
+              </div>
+              <div class="project-overview">
+                <span class="project-order">01 / Web &amp; geospatial</span>
+                <h3>Geographical<br />Discovery Platform</h3>
+                <p class="project-one-line">
+                  Find your place in the world. Then see how close you came.
+                </p>
+                <ul class="tags">
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>JWT</li>
+                  <li>Google Maps API</li>
+                </ul>
+                <div class="project-purpose">
+                  <h4>Why it exists</h4>
+                  <p>
+                    A Geoguessr-inspired multiplayer experience connecting
+                    location discovery with a shared game.
+                  </p>
+                </div>
+                <a
+                  class="text-link"
+                  href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr?subject=Geographical%20Discovery%20Platform"
+                  >Let's talk about this build
+                  <svg class="icon"><use href="#i-diagonal" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="project-outcome">
+              <span class="outcome-marker">↗</span>
               <div>
-                <dt>4+</dt>
-                <dd>End-to-end digital products built</dd>
+                <h4>What I built</h4>
+                <p>
+                  Secure accounts, persistent sessions, role-based dashboards,
+                  profile customisation, and map-based hints and scoring.
+                </p>
               </div>
+            </div>
+            <details>
+              <summary>
+                <span
+                  >Under the surface
+                  <small>The engineering behind the experience</small></span
+                ><svg class="icon"><use href="#i-plus" /></svg>
+              </summary>
+              <div class="project-detail">
+                <div>
+                  <h4>Technical challenge</h4>
+                  <p>
+                    Connecting Google Maps location hints and scoring logic with
+                    the state of a multiplayer game, alongside JWT
+                    authentication and role management.
+                  </p>
+                </div>
+                <div>
+                  <h4>Working outcome</h4>
+                  <p>
+                    A location-discovery platform with separate user and admin
+                    experiences and persistent authenticated sessions.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article
+            id="project-network"
+            class="project project-network"
+            data-project-panel="network"
+          >
+            <div class="project-display">
+              <div class="project-visual network-visual" aria-hidden="true">
+                <div class="visual-grid"></div>
+                <span class="visual-index">02</span
+                ><svg class="network-lines" viewBox="0 0 400 460">
+                  <path
+                    d="M70 135H170V230H200M330 320H230V230H200M330 120H270V230H200M75 340H145V230H200"
+                  />
+                  <circle class="signal-packet" cx="170" cy="175" r="4" />
+                  <circle cx="270" cy="155" r="3" />
+                  <circle cx="145" cy="300" r="3" /></svg
+                ><span class="network-node node-one"
+                  >CLIENT 01<span></span></span
+                ><span class="network-node node-center"
+                  >SERVER<small>TCP / IP</small></span
+                ><span class="network-node node-two"
+                  >CLIENT 02<span></span></span
+                ><span class="network-port port-one">[ channel ]</span
+                ><span class="network-port port-two">[ message ]</span
+                ><span class="visual-caption"
+                  >INDEPENDENT THREADS. SHARED SPACE.</span
+                >
+              </div>
+              <div class="project-overview">
+                <span class="project-order">02 / Systems &amp; networks</span>
+                <h3>Messaging<br />client/server suite</h3>
+                <p class="project-one-line">
+                  Different clients. One conversation.
+                </p>
+                <ul class="tags">
+                  <li>C</li>
+                  <li>TCP/IP</li>
+                  <li>Multithreading</li>
+                </ul>
+                <div class="project-purpose">
+                  <h4>Why it exists</h4>
+                  <p>
+                    A LAN messaging system for real-time collaboration between
+                    classmates, including conversations and file sharing.
+                  </p>
+                </div>
+                <a
+                  class="text-link"
+                  href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr?subject=Messaging%20client%2Fserver%20suite"
+                  >Let's talk about this build
+                  <svg class="icon"><use href="#i-diagonal" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="project-outcome">
+              <span class="outcome-marker">↗</span>
               <div>
-                <dt>6</dt>
-                <dd>Spoken & programming languages</dd>
+                <h4>What I built</h4>
+                <p>
+                  Client/server architecture and command handling for channels,
+                  private messages, and file transfers.
+                </p>
               </div>
+            </div>
+            <details>
+              <summary>
+                <span
+                  >Under the surface
+                  <small>The engineering behind the experience</small></span
+                ><svg class="icon"><use href="#i-plus" /></svg>
+              </summary>
+              <div class="project-detail">
+                <div>
+                  <h4>Technical challenge</h4>
+                  <p>
+                    Keeping concurrent threads safe around shared resources
+                    while handling network errors and graceful recovery.
+                  </p>
+                </div>
+                <div>
+                  <h4>Working outcome</h4>
+                  <p>
+                    A multithreaded LAN messaging suite supporting real-time
+                    communication and file transfers between clients.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article
+            id="project-vision"
+            class="project project-vision"
+            data-project-panel="vision"
+          >
+            <div class="project-display">
+              <div class="project-visual vision-visual" aria-hidden="true">
+                <div class="visual-grid"></div>
+                <span class="visual-index">03</span>
+                <div class="pong-court">
+                  <span class="court-score">00 <i>:</i> 01</span
+                  ><span class="pong-paddle paddle-left"></span
+                  ><span class="pong-paddle paddle-right"></span
+                  ><span class="pong-ball"></span
+                  ><span class="tracking-point"></span>
+                </div>
+                <svg class="gesture-hand" viewBox="0 0 100 100">
+                  <path
+                    d="M25 85 15 54Q10 42 18 45L30 60 22 21Q20 13 26 16L39 49 36 11Q36 3 42 8L49 47 53 17Q56 9 60 16L60 53 69 35Q75 28 78 35L69 75 63 85Z"
+                  />
+                  <path d="m30 60 19-13 11 6 9 22M25 85l24-38 14 38" />
+                  <circle cx="30" cy="60" r="2" />
+                  <circle cx="49" cy="47" r="2" />
+                  <circle cx="60" cy="53" r="2" />
+                  <circle cx="69" cy="75" r="2" /></svg
+                ><span class="visual-caption">YOUR HAND IS THE CONTROLLER.</span
+                ><span class="visual-coordinate"
+                  >GESTURE TRACKING<br /><b>+ ACTIVE</b></span
+                >
+              </div>
+              <div class="project-overview">
+                <span class="project-order">03 / Computer vision</span>
+                <h3>Vision-based<br />Ping Pong</h3>
+                <p class="project-one-line">
+                  A familiar game. A different kind of controller.
+                </p>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>OpenCV</li>
+                  <li>Real-time interaction</li>
+                </ul>
+                <div class="project-purpose">
+                  <h4>Why it exists</h4>
+                  <p>
+                    An arcade experiment exploring how hand gestures can replace
+                    physical controls.
+                  </p>
+                </div>
+                <a
+                  class="text-link"
+                  href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr?subject=Vision-based%20Ping%20Pong"
+                  >Let's talk about this build
+                  <svg class="icon"><use href="#i-diagonal" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="project-outcome">
+              <span class="outcome-marker">↗</span>
               <div>
-                <dt>2025</dt>
-                <dd>Internship availability Apr - Aug</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="hero-visual parallax">
-            <div class="glass-card tilt reveal" data-reveal="right">
-              <p>Based in</p>
-              <h2>Montpellier, France</h2>
-              <span class="pill">Hybrid | Remote ready</span>
-            </div>
-            <div class="floating-cards">
-              <article class="tilt reveal" data-reveal="left">
-                <h3>Engineering + Management</h3>
-                <p>DAMS4 program combining software craftsmanship with leadership.</p>
-              </article>
-              <article class="tilt reveal" data-reveal="right">
-                <h3>Internship 2025</h3>
-                <p>Ready to join a tech-driven team for a 4-month mission from April.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section id="about" class="section about" data-section="about">
-        <div class="wrapper">
-          <div class="section-header reveal" data-reveal="up">
-            <p class="eyebrow">Profile</p>
-            <h2>Turning complex ideas into usable and measurable software</h2>
-          </div>
-          <div class="about-grid">
-            <p class="reveal" data-reveal="up">I am a 4th year software engineering and management student (DAMS4) who thrives at the intersection of code quality and human collaboration. I love designing resilient architectures, prototyping quickly, and shipping products that deliver clear value.</p>
-            <p class="reveal" data-reveal="up">My projects cover full-stack web platforms, networked applications, and computer vision games. I enjoy leading teammates, organising agile rituals, and translating user feedback into actionable improvements.</p>
-            <ul class="highlight-list reveal" data-reveal="up">
-              <li><a href="tel:+33768856633">+33 7 68 85 66 33</a></li>
-              <li><a href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr">ayoub.el-ghazi-ouserbane@etu.umontpellier.fr</a></li>
-              <li><a href="https://www.linkedin.com/in/ayoub-el-ghazi-732465241" target="_blank" rel="noreferrer">linkedin.com/in/ayoub-el-ghazi-732465241</a></li>
-              <li><a href="https://ayoub.dev" target="_blank" rel="noreferrer">Portfolio | ayoub.dev</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section skills" data-section="skills">
-        <div class="wrapper">
-          <div class="section-header reveal" data-reveal="up">
-            <p class="eyebrow">Skills</p>
-            <h2>Technical foundations paired with team leadership</h2>
-          </div>
-          <div class="pill-group reveal" data-reveal="up">
-            <span class="pill">Full-stack web engineering</span>
-            <span class="pill">Systems & network programming</span>
-            <span class="pill">Agile & Scrum facilitation</span>
-            <span class="pill">Human-centered problem solving</span>
-            <span class="pill">AI-assisted prototyping</span>
-            <span class="pill">Data analysis & reporting</span>
-          </div>
-          <div class="skill-icon-grid reveal" data-reveal="up">
-            <article class="skill-icon-card" data-brand="java">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/java.svg" alt="Java logo" loading="lazy" />
-              </div>
-              <span>Java</span>
-            </article>
-            <article class="skill-icon-card" data-brand="c">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/c.svg" alt="C logo" loading="lazy" />
-              </div>
-              <span>C</span>
-            </article>
-            <article class="skill-icon-card" data-brand="swift">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/swift.svg" alt="Swift logo" loading="lazy" />
-              </div>
-              <span>Swift</span>
-            </article>
-            <article class="skill-icon-card" data-brand="r">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/r.svg" alt="R logo" loading="lazy" />
-              </div>
-              <span>R</span>
-            </article>
-            <article class="skill-icon-card" data-brand="html">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/html5.svg" alt="HTML5 logo" loading="lazy" />
-              </div>
-              <span>HTML</span>
-            </article>
-            <article class="skill-icon-card" data-brand="css">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/css3.svg" alt="CSS3 logo" loading="lazy" />
-              </div>
-              <span>CSS</span>
-            </article>
-            <article class="skill-icon-card" data-brand="javascript">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/javascript.svg" alt="JavaScript logo" loading="lazy" />
-              </div>
-              <span>JavaScript</span>
-            </article>
-            <article class="skill-icon-card" data-brand="typescript">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/typescript.svg" alt="TypeScript logo" loading="lazy" />
-              </div>
-              <span>TypeScript</span>
-            </article>
-            <article class="skill-icon-card" data-brand="python">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/python.svg" alt="Python logo" loading="lazy" />
-              </div>
-              <span>Python</span>
-            </article>
-            <article class="skill-icon-card" data-brand="sql">
-              <div class="skill-icon-card__badge">
-                <img src="assets/icons/postgresql.svg" alt="PostgreSQL elephant logo" loading="lazy" />
-              </div>
-              <span>SQL</span>
-            </article>
-          </div>
-          <div class="skill-grid">
-            <article class="tilt reveal" data-reveal="up">
-              <h3>Hard skills</h3>
-              <p>Programming languages and frameworks I use every week.</p>
-              <ul>
-                <li>Python, C, Java, Swift, JavaScript/TypeScript, SQL</li>
-                <li>Angular, Node.js, RESTful services, JWT authentication</li>
-                <li>Computer vision with OpenCV, Google Maps Platform, WebSockets</li>
-              </ul>
-            </article>
-            <article class="tilt reveal" data-reveal="up">
-              <h3>Soft skills</h3>
-              <p>A collaborative mindset shaped by team projects and leadership roles.</p>
-              <ul>
-                <li>Critical thinking & structured problem solving</li>
-                <li>Curiosity and adaptability when facing new challenges</li>
-                <li>Autonomous yet supportive teammate focused on outcomes</li>
-              </ul>
-            </article>
-            <article class="tilt reveal" data-reveal="up">
-              <h3>Tools & methods</h3>
-              <p>Practices that keep deliveries reliable and transparent.</p>
-              <ul>
-                <li>Git, GitHub, CI/CD, code reviews, automated testing</li>
-                <li>Agile, Scrum ceremonies, backlog refinement</li>
-                <li>Data analysis, dashboarding, AI assistants for prototyping</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section projects" data-section="projects">
-        <div class="wrapper">
-          <div class="section-header reveal" data-reveal="up">
-            <p class="eyebrow">Projects</p>
-            <h2>Selected academic projects with real-world constraints</h2>
-          </div>
-          <div class="carousel" data-carousel>
-            <button class="carousel-btn prev" aria-label="Previous project">&#10094;</button>
-            <div class="carousel-viewport">
-              <div class="carousel-track">
-                <article class="project-card slide tilt reveal" data-reveal="up">
-                  <header>
-                    <p class="project-meta">Node.js | Express | JWT | Google Maps API</p>
-                    <h3>Geographical Discovery Platform</h3>
-                  </header>
-                  <p>Built a Geoguessr-inspired multiplayer experience with secure authentication and rich geospatial data.</p>
-                  <ul>
-                    <li>Implemented JWT-based auth, role management, and persistent sessions.</li>
-                    <li>Integrated Google Maps API for location hints and scoring logic.</li>
-                    <li>Designed admin/user dashboards plus profile customisation.</li>
-                  </ul>
-                </article>
-                <article class="project-card slide tilt reveal" data-reveal="up">
-                  <header>
-                    <p class="project-meta">C | TCP/IP | Multi-threading</p>
-                    <h3>Messaging client/server suite</h3>
-                  </header>
-                  <p>Developed a robust LAN messaging system enabling real-time collaboration for classmates.</p>
-                  <ul>
-                    <li>Architected command handling for channels, private messages, and file transfers.</li>
-                    <li>Managed concurrency with threads, ensuring safe access to shared resources.</li>
-                    <li>Hardened the server with error handling and graceful recovery strategies.</li>
-                  </ul>
-                </article>
-                <article class="project-card slide tilt reveal" data-reveal="up">
-                  <header>
-                    <p class="project-meta">Python | OpenCV | Real-time interaction</p>
-                    <h3>Vision-based Ping Pong</h3>
-                  </header>
-                  <p>Prototype of an arcade game controlled by hand gestures detected through computer vision.</p>
-                  <ul>
-                    <li>Used OpenCV to capture and track hand movements in real time.</li>
-                    <li>Translated gestures into paddle controls with smoothing algorithms.</li>
-                    <li>Delivered an accessible gaming experience without physical controllers.</li>
-                  </ul>
-                </article>
+                <h4>What I built</h4>
+                <p>
+                  Real-time hand capture and tracking with OpenCV, translated
+                  into paddle movement using smoothing algorithms.
+                </p>
               </div>
             </div>
-            <button class="carousel-btn next" aria-label="Next project">&#10095;</button>
-            <div class="carousel-dots" aria-hidden="true"></div>
+            <details>
+              <summary>
+                <span
+                  >Under the surface
+                  <small>The engineering behind the experience</small></span
+                ><svg class="icon"><use href="#i-plus" /></svg>
+              </summary>
+              <div class="project-detail">
+                <div>
+                  <h4>Technical challenge</h4>
+                  <p>
+                    Turning noisy gesture detection into smooth, responsive
+                    paddle control without losing the immediacy of play.
+                  </p>
+                </div>
+                <div>
+                  <h4>Prototype outcome</h4>
+                  <p>
+                    A gesture-controlled arcade game that can be played without
+                    a physical controller.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </article>
+          <p class="project-footnote">
+            Visual field notes, illustrated from each project’s concept.
+          </p>
+        </section>
+        <section
+          id="skills"
+          class="chapter"
+          aria-labelledby="skills-title"
+          data-number="03"
+          data-label="My toolkit"
+        >
+          <p class="eyebrow">03 / TOOLS OF THE TRADE</p>
+          <h2 id="skills-title">
+            Different tools.<br /><em>One builder's mindset.</em>
+          </h2>
+          <p class="chapter-lead">
+            Technical foundations, a collaborative approach, and the curiosity
+            to keep learning.
+          </p>
+          <div class="tool-grid">
+            <div>
+              <img
+                src="/assets/icons/python.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>Python</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/java.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>Java</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/c.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>C</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/swift.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>Swift</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/javascript.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>JavaScript</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/typescript.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>TypeScript</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/html5.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>HTML</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/css3.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>CSS</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/postgresql.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>SQL</span>
+            </div>
+            <div>
+              <img
+                src="/assets/icons/r.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              /><span>R</span>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section experience" data-section="experience">
-        <div class="wrapper">
-          <div class="section-header reveal" data-reveal="up">
-            <p class="eyebrow">Experience</p>
-            <h2>Academic path focused on engineering excellence</h2>
+          <div class="skill-rows">
+            <div>
+              <span>01</span>
+              <h3>Web &amp; systems</h3>
+              <p>
+                Angular, Node.js, RESTful services, JWT authentication,
+                WebSockets, and network programming.
+              </p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Vision &amp; data</h3>
+              <p>
+                OpenCV, Google Maps Platform, data analysis and reporting, and
+                AI-assisted prototyping.
+              </p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Tools &amp; practice</h3>
+              <p>
+                Git, GitHub, CI/CD, code reviews, automated testing, Agile, and
+                Scrum facilitation.
+              </p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>The human part</h3>
+              <p>
+                Structured problem solving, adaptability, autonomous work, and
+                supporting a team toward a shared outcome.
+              </p>
+            </div>
           </div>
+        </section>
+        <section
+          id="education"
+          class="chapter"
+          aria-labelledby="education-title"
+          data-number="04"
+          data-label="The journey"
+        >
+          <p class="eyebrow">04 / EDUCATION &amp; DIRECTION</p>
+          <h2 id="education-title">Always a<br /><em>work in progress.</em></h2>
+          <p class="chapter-lead">
+            An academic path combining software engineering with the way people
+            and projects work.
+          </p>
           <ol class="timeline">
-            <li class="reveal" data-reveal="up">
-              <div class="timeline-point"></div>
-              <div class="timeline-content">
-                <h3>Polytech Montpellier | DAMS4</h3>
-                <p class="timeline-date">2024 - Present</p>
-                <p>3rd and 4th years of a 5-year engineering curriculum in software engineering and management (M.Eng equivalent).</p>
+            <li>
+              <span class="timeline-date">2024 — ONWARD</span>
+              <div>
+                <span class="eyebrow">ENGINEERING CURRICULUM</span>
+                <h3>Polytech Montpellier</h3>
+                <p>Software engineering &amp; management · DAMS</p>
+                <p class="muted">
+                  A five-year engineering curriculum combining technical
+                  foundations, software development, and team and project
+                  management.
+                </p>
               </div>
             </li>
-            <li class="reveal" data-reveal="up">
-              <div class="timeline-point"></div>
-              <div class="timeline-content">
-                <h3>Polytech Montpellier | Preparatory cycle</h3>
-                <p class="timeline-date">2022 - 2024</p>
-                <p>Equivalent to two years of preparatory classes, securing entry into a selective French engineering school.</p>
+            <li>
+              <span class="timeline-date">2022 — 2024</span>
+              <div>
+                <span class="eyebrow">PREPARATORY CYCLE</span>
+                <h3>Polytech Montpellier</h3>
+                <p>Two-year preparatory cycle.</p>
+                <p class="muted">
+                  Foundations for entry into a selective French engineering
+                  school.
+                </p>
               </div>
             </li>
-            <li class="reveal" data-reveal="up">
-              <div class="timeline-point"></div>
-              <div class="timeline-content">
-                <h3>Lycee Jean Mermoz | High school diploma</h3>
-                <p class="timeline-date">2022</p>
-                <p>Baccalaureat with honours in physics and mathematics (equivalent to A-levels).</p>
+            <li>
+              <span class="timeline-date">2022</span>
+              <div>
+                <span class="eyebrow">BACCALAURÉAT</span>
+                <h3>Lycée Jean Mermoz</h3>
+                <p>Physics &amp; mathematics, with honours.</p>
               </div>
             </li>
           </ol>
-        </div>
-      </section>
-
-      <section id="languages" class="section languages" data-section="languages">
-        <div class="wrapper">
-          <div class="section-header reveal" data-reveal="up">
-            <p class="eyebrow">Languages</p>
-            <h2>Multilingual collaboration across teams</h2>
+          <div class="closing-note">
+            <span class="tiny-cross">+</span>
+            <p>
+              Interested in thoughtful software and the teams that build it.<br /><a
+                class="text-link"
+                href="#contact"
+                >Let's talk about your next project
+                <svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </p>
           </div>
-          <div class="languages-grid reveal" data-reveal="up">
-            <article class="language-card">
-              <strong>French</strong>
-              <span class="language-proficiency">Native speaker</span>
-            </article>
-            <article class="language-card">
-              <strong>English</strong>
-              <span class="language-proficiency">TOEIC level</span>
-            </article>
-            <article class="language-card">
-              <strong>Spanish</strong>
-              <span class="language-proficiency">Advanced</span>
-            </article>
-            <article class="language-card">
-              <strong>Berber</strong>
-              <span class="language-proficiency">Native speaker</span>
-            </article>
-            <article class="language-card">
-              <strong>Arabic</strong>
-              <span class="language-proficiency">Intermediate</span>
-            </article>
-          </div>
-          <div class="references-card reveal" data-reveal="up">
-            <p>References will be provided upon request.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact" data-section="contact">
-        <div class="wrapper">
-          <div class="contact-card reveal" data-reveal="up">
-            <div class="contact-header">
-              <p class="eyebrow">Contact</p>
-              <h2>Let's create impactful software together</h2>
-              <p>I am available for a 4-month internship from April to August 2025. Reach out and I will answer within 24 hours.</p>
-            </div>
-            <div class="contact-details">
-              <span>Phone | <a href="tel:+33768856633">+33 7 68 85 66 33</a></span>
-              <span>Email | <a href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr">ayoub.el-ghazi-ouserbane@etu.umontpellier.fr</a></span>
-              <span>Location | Montpellier, South of France</span>
-            </div>
-            <div class="contact-actions">
-              <a class="btn primary magnetic" href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr">Email me</a>
-              <a class="btn ghost magnetic" href="https://www.linkedin.com/in/ayoub-el-ghazi-732465241" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="btn ghost magnetic" href="https://ayoub.dev" target="_blank" rel="noreferrer">Portfolio</a>
+        </section>
+        <section
+          id="contact"
+          class="chapter"
+          aria-labelledby="contact-title"
+          data-number="05"
+          data-label="Say hello"
+        >
+          <p class="eyebrow">05 / THE START OF SOMETHING</p>
+          <h2 id="contact-title">
+            Good things start<br /><em>with a hello.</em>
+          </h2>
+          <p class="chapter-lead">
+            Have an interesting problem, an opportunity, or an idea to share?
+            I'd love to hear about it.
+          </p>
+          <a
+            class="email-cta"
+            href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr"
+            ><span>Let's make a connection.</span
+            ><svg class="icon"><use href="#i-diagonal" /></svg
+          ></a>
+          <div class="contact-rows">
+            <a href="mailto:ayoub.el-ghazi-ouserbane@etu.umontpellier.fr"
+              ><span>EMAIL</span
+              ><strong>ayoub.el-ghazi-ouserbane@etu.umontpellier.fr</strong
+              ><svg class="icon"><use href="#i-diagonal" /></svg></a
+            ><a href="tel:+33768856633"
+              ><span>PHONE</span><strong>+33 7 68 85 66 33</strong
+              ><svg class="icon"><use href="#i-diagonal" /></svg></a
+            ><a
+              href="https://www.linkedin.com/in/ayoub-el-ghazi-732465241"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>ELSEWHERE</span
+              ><strong>LinkedIn <small>(opens in a new tab)</small></strong
+              ><svg class="icon"><use href="#i-diagonal" /></svg
+            ></a>
+            <div>
+              <span>BASED IN</span><strong>Montpellier, South of France</strong
+              ><span class="status-dot"></span>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrapper">
-        <p>Copyright 2025 Ayoub El Ghazi. Crafted with care in Montpellier.</p>
-        <a class="btn ghost" href="#hero">Back to top</a>
+          <p class="contact-signoff">
+            From a little curiosity to something useful.<br /><span
+              >Thanks for exploring.</span
+            >
+          </p>
+        </section>
       </div>
-    </footer>
-
-    <div class="cursor" aria-hidden="true"></div>
-
-    <script src="assets/js/main.js" defer></script>
+    </div>
+    <div class="explore-cursor" aria-hidden="true"><span></span></div>
+    <dialog id="chapter-dialog" aria-labelledby="chapter-label">
+      <div class="dialog-bar">
+        <a href="#world" class="back-world"
+          ><svg class="icon"><use href="#i-world" /></svg> Back to the world</a
+        ><span id="chapter-label"></span
+        ><button
+          id="close-chapter"
+          class="icon-button"
+          aria-label="Close section"
+        >
+          <svg class="icon"><use href="#i-close" /></svg>
+        </button>
+      </div>
+      <nav class="chapter-compass" aria-label="Section compass">
+        <a href="#about">01 <span>About</span></a
+        ><a href="#projects">02 <span>Work</span></a
+        ><a href="#skills">03 <span>Toolkit</span></a
+        ><a href="#education">04 <span>Journey</span></a
+        ><a href="#contact">05 <span>Contact</span></a>
+      </nav>
+      <div class="dialog-scroll">
+        <div id="chapter-content"></div>
+        <nav class="chapter-navigation" aria-label="Explore another section">
+          <span class="eyebrow">KEEP EXPLORING</span
+          ><a id="next-chapter" href="#projects"
+            ><span>Selected work</span
+            ><svg class="icon"><use href="#i-arrow" /></svg
+          ></a>
+        </nav>
+      </div>
+      <div class="dialog-footer">
+        <span>AYOUB EL GHAZI / BELOW THE SURFACE</span
+        ><span class="escape-hint">ESC TO RETURN</span>
+      </div>
+    </dialog>
   </body>
 </html>
